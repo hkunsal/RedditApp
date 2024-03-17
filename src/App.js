@@ -15,7 +15,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="LoadingScreen" // Set the initial route to the loading screen
+        initialRouteName="LoadingScreen" 
         screenOptions={({ route }) => ({
           header: () => {
             if (route.name === 'HomeScreen') {

@@ -13,8 +13,8 @@ const HomeScreenStyles = StyleSheet.create({
     borderBottomColor: '#ccc',
   },
   postHeader: {
-    flexDirection: 'row', // Align items horizontally
-    alignItems: 'center', // Align items vertically
+    flexDirection: 'row', 
+    alignItems: 'center', 
   },
   logo: {
     width: 20,

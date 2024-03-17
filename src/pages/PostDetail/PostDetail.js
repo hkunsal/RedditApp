@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Image, TouchableOpacity, Linking, ActivityIndicator } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
 import PostDetailStyles from './PostDetail.style';
 import placeholder from './placeholder.png';
@@ -8,9 +7,7 @@ import placeholder from './placeholder.png';
 const PostDetail = ({ route }) => {
   const { post } = route.params;
   const [postDetail, setPostDetail] = useState(null);
-  const [thumbnailError, setThumbnailError] = useState(false); // State to track thumbnail loading error
-  const [loading, setLoading] = useState(true); // Initialize loading state
-  const navigation = useNavigation();
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     fetchPostDetail();
@@ -26,7 +23,7 @@ const PostDetail = ({ route }) => {
     } catch (error) {
       console.error('Error fetching post detail:', error);
     } finally {
-      setLoading(false); // Set loading to false whether request succeeds or fails
+      setLoading(false); 
     }
   };
 
@@ -34,22 +31,21 @@ const PostDetail = ({ route }) => {
     if (postDetail && postDetail.url) {
       Linking.openURL(postDetail.url);
     }
-  };
+  }; //WebView
 
   return (
     <View style={PostDetailStyles.container}>
-      {loading ? ( // Show activity indicator while loading
+      {loading ? ( 
         <ActivityIndicator size="large" color="#0000ff" />
       ) : (
         <>
           <TouchableOpacity onPress={openLink}>
             <View style={PostDetailStyles.thumbnailContainer}>
-              {!thumbnailError && postDetail.thumbnail && postDetail.thumbnail !== 'spoiler' ? (
+              {postDetail.thumbnail && postDetail.thumbnail !== 'spoiler' ? (
                 <Image
                   source={{ uri: postDetail.thumbnail }}
                   style={PostDetailStyles.thumbnail}
                   resizeMode="contain"
-                  onError={() => setThumbnailError(true)} // Set state when there's an error loading the image
                 />
               ) : (
                 <Image

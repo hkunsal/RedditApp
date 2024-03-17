@@ -3,16 +3,16 @@ import { StyleSheet } from 'react-native';
 const PostDetailStyles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    padding: 10, // Center all content horizontally
-    justifyContent: 'center', // Center all content vertically
+    padding: 10, 
+    justifyContent: 'center', 
   },
   thumbnailContainer: {
-    alignItems: 'center', // Center the thumbnail horizontally
-    marginTop: 10, // Add margin top to create space between the thumbnail and other elements
+    alignItems: 'center', 
+    marginTop: 10, 
   },
   thumbnail: {
-    width: 300, // Increased width
-    height: 300, // Increased height
+    width: 300, 
+    height: 300, 
   },
 
   detailsContainer: {
@@ -48,7 +48,7 @@ const PostDetailStyles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginTop: 10,
-    textAlign: 'center', // Center the title horizontally
+    textAlign: 'center', 
   },
 
   scoreContainer: {
