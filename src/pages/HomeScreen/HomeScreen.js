@@ -49,7 +49,7 @@ const HomeScreen = () => {
           <Image source={redditLogo} style={HomeScreenStyles.logo} />
           <Text style={HomeScreenStyles.title}>{post.title}</Text>
         </View>
-        <Text style={HomeScreenStyles.author}>{`by ${post.author}`} </Text>
+        <Text style={HomeScreenStyles.author} textBreakStrategy="simple">{`by ${post.author}`} </Text>
       </TouchableOpacity>
     );
   };

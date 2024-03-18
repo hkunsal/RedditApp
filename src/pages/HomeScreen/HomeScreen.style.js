@@ -14,7 +14,7 @@ const HomeScreenStyles = StyleSheet.create({
   },
   postHeader: {
     flexDirection: 'row', 
-    alignItems: 'center', 
+    alignItems: 'left',
   },
   logo: {
     width: 20,
@@ -24,10 +24,12 @@ const HomeScreenStyles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginLeft: 10,
+    alignSelf: 'stretch',
   },
   author: {
     fontSize: 14,
     color: '#666',
+    marginLeft: 30,
   },
 });
 

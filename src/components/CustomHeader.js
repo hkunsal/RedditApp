@@ -6,11 +6,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const CustomHeader = () => {
   const navigation = useNavigation(); 
-
   const handleGoBack = () => {
-    if (navigation.canGoBack()) {
-      navigation.goBack();
-    }
+    navigation.goBack();
   };
 
   return (

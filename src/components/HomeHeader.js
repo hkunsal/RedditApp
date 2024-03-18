@@ -23,10 +23,6 @@ const styles = StyleSheet.create({
     height: 60,
     resizeMode: 'contain',
   },
-  backButton: {
-    position: 'absolute',
-    left: 10,
-  },
 });
 
 export default HomeHeader;
